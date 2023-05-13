@@ -1,0 +1,59 @@
+$white: rgb(255, 250, 250);
+$primary-color: #535da1;
+$secondary-color: #14b789;
+
+@mixin font-style($fs, $fw, $ls, $lh, $cl) {
+   font-size: $fs;
+   font-weight: $fw;
+   letter-spacing: $ls;
+   line-height: $lh;
+   color: $cl;
+}
+
+@mixin circle($wid, $heit, $radius, $bgc) {
+   width: $wid;
+   height: $heit;
+   border-radius: $radius;
+   background-color: $bgc;
+}
+
+.element_row {
+   display: flex;
+   flex-direction: row;
+}
+@mixin element_position($d, $fd, $fw, $jf, $al, $gap) {
+   display: $d;
+   flex-direction: $fd;
+   flex-wrap: $fw;
+   justify-content: $jf;
+   align-items: $al;
+   gap: $gap;
+}
+
+@mixin breakpoint($breakpoint) {
+   @if $breakpoint == "xxl" {
+      @media (max-width: 1400px) {
+         @content;
+      }
+   } @else if $breakpoint == "sxl" {
+      @media (max-width: 1200px) {
+         @content;
+      }
+   } @else if $breakpoint == "xl" {
+      @media (max-width: 992px) {
+         @content;
+      }
+   } @else if $breakpoint == "lg" {
+      @media (max-width: 768px) {
+         @content;
+      }
+   } @else if $breakpoint == "md" {
+      @media (max-width: 576px) {
+         @content;
+      }
+   } @else if $breakpoint == "sm" {
+      @media (max-width: 320px) {
+         @content;
+      }
+   }
+}
