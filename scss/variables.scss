@@ -1,6 +1,14 @@
 $white: rgb(255, 250, 250);
-$primary-color: #535da1;
-$secondary-color: #14b789;
+$about-color: rgb(0, 0, 0);
+$logo-color: rgb(66, 169, 237);
+$form-color: rgb(39, 39, 51);
+$footer-color: rgb(195, 195, 195);
+$checkout-color: rgb(187, 187, 187);
+$navBG-color: rgba(16, 16, 29, 0.9);
+$navHover-color: rgb(67, 171, 240);
+$detailed-color: rgb(42, 43, 48);
+$orderBackground-color: rgb(62, 156, 220);
+$detailedBackground-color: rgb(111, 109, 123);
 
 @mixin font-style($fs, $fw, $ls, $lh, $cl) {
    font-size: $fs;

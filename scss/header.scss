@@ -1,1 +1,96 @@
 @import "./variables.scss";
+
+.header {
+   background-image: url(../img/mainFoto/mainFoto_2x.webp);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: 0 0;
+   @include breakpoint("md") {
+      background-image: url(../img/mainFoto/mainFoto_1x.webp);
+   }
+   .header__nav {
+      background-color: $navBG-color;
+
+      .nav__content {
+         @include element_position(flex, row, 0, center, center, 485px);
+         padding: 33.5px 0 20px 0;
+      }
+      .nav__logo {
+         a,
+         span {
+            @include font-style(28px, 800, 0, 0, $white);
+            text-transform: uppercase;
+            font-family: "Raleway-ExtraBold";
+         }
+         span {
+            color: $logo-color;
+         }
+      }
+      .nav__list {
+         @include element_position(flex, row, 0, 0, 0, 60px);
+         .nav__item a {
+            @include font-style(13px, 600, 0, 0, $white);
+            text-transform: uppercase;
+            font-family: "Lato-Semibold";
+         }
+         .nav__item a:hover {
+            color: $navHover-color;
+         }
+      }
+   }
+   .nav {
+      margin-bottom: 70px;
+   }
+   .header__text {
+      max-width: 700px;
+      .text__title {
+         @include font-style(45px, 700, 0, 58px, $logo-color);
+         text-transform: uppercase;
+         font-family: "Lato-Bold";
+      }
+      .text__title span {
+         color: $about-color;
+      }
+   }
+   .title {
+      margin-bottom: 80px;
+   }
+   .text__info {
+      max-width: 534px;
+      .info__title {
+         @include font-style(20px, 700, 0, 24px, $about-color);
+         font-family: "Lato-Bold";
+      }
+      .info__list {
+         @include font-style(20px, 400, 0, 24px, $about-color);
+         font-family: "Lato-Regular";
+      }
+      .list {
+         margin-bottom: 80px;
+      }
+      .btn {
+         @include element_position(flex, row, 0, 0, 0, 30px);
+         .btn__order {
+            @include font-style(13px, 400, 0, 0, $white);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $orderBackground-color;
+            border: 1px solid $white;
+            border-radius: 4px;
+            padding: 15px 31px;
+         }
+         .btn__detailed {
+            @include font-style(13px, 400, 0, 0, $detailed-color);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $white;
+            border: 1px solid $detailedBackground-color;
+            border-radius: 4px;
+            padding: 15px 30px;
+         }
+      }
+      .distans {
+         margin-bottom: 202px;
+      }
+   }
+}
