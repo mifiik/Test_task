@@ -42,7 +42,7 @@
       margin-bottom: 70px;
    }
    .header__text {
-      max-width: 700px;
+      max-width: 750px;
       .text__title {
          @include font-style(45px, 700, 0, 58px, $logo-color);
          text-transform: uppercase;
@@ -51,46 +51,47 @@
       .text__title span {
          color: $about-color;
       }
-   }
-   .title {
-      margin-bottom: 80px;
-   }
-   .text__info {
-      max-width: 534px;
-      .info__title {
-         @include font-style(20px, 700, 0, 24px, $about-color);
-         font-family: "Lato-Bold";
-      }
-      .info__list {
-         @include font-style(20px, 400, 0, 24px, $about-color);
-         font-family: "Lato-Regular";
-      }
-      .list {
+
+      .title {
          margin-bottom: 80px;
       }
-      .btn {
-         @include element_position(flex, row, 0, 0, 0, 30px);
-         .btn__order {
-            @include font-style(13px, 400, 0, 0, $white);
-            text-transform: uppercase;
-            text-align: center;
-            background-color: $orderBackground-color;
-            border: 1px solid $white;
-            border-radius: 4px;
-            padding: 15px 31px;
+      .text__info {
+         max-width: 534px;
+         .info__title {
+            @include font-style(20px, 700, 0, 24px, $about-color);
+            font-family: "Lato-Bold";
          }
-         .btn__detailed {
-            @include font-style(13px, 400, 0, 0, $detailed-color);
-            text-transform: uppercase;
-            text-align: center;
-            background-color: $white;
-            border: 1px solid $detailedBackground-color;
-            border-radius: 4px;
-            padding: 15px 30px;
+         .info__list {
+            @include font-style(20px, 400, 0, 24px, $about-color);
+            font-family: "Lato-Regular";
+         }
+         .list {
+            margin-bottom: 80px;
          }
       }
-      .distans {
-         margin-bottom: 202px;
+   }
+   .btn {
+      @include element_position(flex, row, 0, 0, 0, 30px);
+      .btn__order {
+         @include font-style(13px, 400, 0, 0, $white);
+         text-transform: uppercase;
+         text-align: center;
+         background-color: $orderBackground-color;
+         border: 1px solid $white;
+         border-radius: 4px;
+         padding: 15px 31px;
       }
+      .btn__detailed {
+         @include font-style(13px, 400, 0, 0, $detailed-color);
+         text-transform: uppercase;
+         text-align: center;
+         background-color: $white;
+         border: 1px solid $detailedBackground-color;
+         border-radius: 4px;
+         padding: 15px 30px;
+      }
+   }
+   .distans {
+      margin-bottom: 202px;
    }
 }

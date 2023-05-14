@@ -98,7 +98,7 @@
   margin-bottom: 70px;
 }
 .header .header__text {
-  max-width: 700px;
+  max-width: 750px;
 }
 .header .header__text .text__title {
   font-size: 45px;
@@ -112,13 +112,13 @@
 .header .header__text .text__title span {
   color: rgb(0, 0, 0);
 }
-.header .title {
+.header .header__text .title {
   margin-bottom: 80px;
 }
-.header .text__info {
+.header .header__text .text__info {
   max-width: 534px;
 }
-.header .text__info .info__title {
+.header .header__text .text__info .info__title {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0;
@@ -126,7 +126,7 @@
   color: rgb(0, 0, 0);
   font-family: "Lato-Bold";
 }
-.header .text__info .info__list {
+.header .header__text .text__info .info__list {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0;
@@ -134,10 +134,10 @@
   color: rgb(0, 0, 0);
   font-family: "Lato-Regular";
 }
-.header .text__info .list {
+.header .header__text .text__info .list {
   margin-bottom: 80px;
 }
-.header .text__info .btn {
+.header .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,7 +155,7 @@
           align-items: 0;
   gap: 30px;
 }
-.header .text__info .btn .btn__order {
+.header .btn .btn__order {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0;
@@ -168,7 +168,7 @@
   border-radius: 4px;
   padding: 15px 31px;
 }
-.header .text__info .btn .btn__detailed {
+.header .btn .btn__detailed {
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0;
@@ -181,7 +181,7 @@
   border-radius: 4px;
   padding: 15px 30px;
 }
-.header .text__info .distans {
+.header .distans {
   margin-bottom: 202px;
 }
 
