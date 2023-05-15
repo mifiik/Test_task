@@ -4,20 +4,27 @@
    background-image: url(../img/mainFoto/mainFoto_2x.webp);
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: 0 0;
+   background-position: center;
    @include breakpoint("md") {
       background-image: url(../img/mainFoto/mainFoto_1x.webp);
    }
    .header__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: $navBG-color;
 
       .nav__content {
-         @include element_position(flex, row, 0, center, center, 485px);
+         @include element_position(flex, row, nowrap, space-between, center, 0);
          padding: 33.5px 0 20px 0;
+         @include breakpoint("lg") {
+            @include element_position(0, column, nowrap, 0, center, 0);
+         }
       }
       .nav__logo {
-         a,
-         span {
+         font-size: 28px;
+         a {
             @include font-style(28px, 800, 0, 0, $white);
             text-transform: uppercase;
             font-family: "Raleway-ExtraBold";
@@ -41,12 +48,20 @@
    .nav {
       margin-bottom: 70px;
    }
+   .header__section {
+      margin-top: 82px;
+      padding-top: 103px;
+      padding-bottom: 202px;
+   }
    .header__text {
       max-width: 750px;
       .text__title {
          @include font-style(45px, 700, 0, 58px, $logo-color);
          text-transform: uppercase;
          font-family: "Lato-Bold";
+         @include breakpoint("md") {
+            @include font-style(24px, 600, 0, 40px, $logo-color);
+         }
       }
       .text__title span {
          color: $about-color;
@@ -91,7 +106,15 @@
          padding: 15px 30px;
       }
    }
-   .distans {
-      margin-bottom: 202px;
+}
+
+.dots {
+   display: flex;
+   gap: 20px;
+   li {
+      width: 6px;
+      height: 6px;
+      background-color: red;
+      border-radius: 50%;
    }
 }
