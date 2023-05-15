@@ -33,6 +33,78 @@
             color: $logo-color;
          }
       }
+      // burger
+      .burger {
+         display: none;
+         width: 30px;
+         height: 30px;
+         background-color: #7e8880;
+         padding: 5px;
+         position: relative;
+         z-index: 2;
+         overflow: hidden;
+      }
+
+      .burger span {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: all 0.5s;
+         width: 20px;
+         height: 2px;
+         background-color: rgb(0, 0, 0);
+      }
+
+      .burger span:nth-of-type(2) {
+         top: calc(50% - 5px);
+      }
+
+      .burger span:nth-of-type(3) {
+         top: calc(50% + 5px);
+      }
+
+      .burger span:nth-of-type(2) {
+         top: calc(50% - 5px);
+      }
+
+      .burger span:nth-of-type(3) {
+         top: calc(50% + 5px);
+      }
+
+      @media (max-width: 576px) {
+         .burger {
+            display: block;
+         }
+
+         .menu {
+            width: 100%;
+            flex-direction: column;
+            position: absolute;
+            top: 55px;
+            left: 89%;
+            display: none;
+         }
+
+         .menu.hapend {
+            display: block;
+         }
+
+         .burger.active span:nth-of-type(1) {
+            display: none;
+         }
+
+         .burger.active span:nth-of-type(2) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
+         }
+
+         .burger.active span:nth-of-type(3) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(-45deg);
+         }
+      }
+      // burger
       .nav__list {
          @include element_position(flex, row, 0, 0, 0, 60px);
          .nav__item a {
@@ -42,6 +114,9 @@
          }
          .nav__item a:hover {
             color: $navHover-color;
+         }
+         @include breakpoint("md") {
+            display: none;
          }
       }
    }

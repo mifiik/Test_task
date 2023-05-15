@@ -88,6 +88,72 @@
 .header .header__nav .nav__logo span {
   color: rgb(66, 169, 237);
 }
+.header .header__nav .burger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: #7e8880;
+  padding: 5px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.header .header__nav .burger span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 20px;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+}
+.header .header__nav .burger span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.header .header__nav .burger span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+.header .header__nav .burger span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.header .header__nav .burger span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+@media (max-width: 576px) {
+  .header .header__nav .burger {
+    display: block;
+  }
+  .header .header__nav .menu {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 89%;
+    display: none;
+  }
+  .header .header__nav .menu.hapend {
+    display: block;
+  }
+  .header .header__nav .burger.active span:nth-of-type(1) {
+    display: none;
+  }
+  .header .header__nav .burger.active span:nth-of-type(2) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .header .header__nav .burger.active span:nth-of-type(3) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(-45deg);
+            transform: translate(-50%, 0%) rotate(-45deg);
+  }
+}
 .header .header__nav .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +183,11 @@
 }
 .header .header__nav .nav__list .nav__item a:hover {
   color: rgb(67, 171, 240);
+}
+@media (max-width: 576px) {
+  .header .header__nav .nav__list {
+    display: none;
+  }
 }
 .header .nav {
   margin-bottom: 70px;
