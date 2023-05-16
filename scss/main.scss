@@ -1,2 +1,135 @@
 @import "./variables.scss";
 
+.main {
+   background-image: url(../img/bgContent/contentbg_2x.webp);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 120px 0 151px 0;
+   @include breakpoint("md") {
+      background-image: url(../img/bgContent/contentbg_1x.webp);
+   }
+   .ordering {
+      // max-width: 555px;
+      text-align: center;
+      .ordering__title {
+         @include font-style(36px, 800, 0, 43px, $white);
+         text-transform: uppercase;
+         font-family: "Lato-Heavy";
+         margin-bottom: 30px;
+      }
+      .ordering__title span {
+         color: $orderBackground-color;
+      }
+      .ordering__text {
+         @include font-style(18px, 400, 0, 22px, $checkout-color);
+         font-family: "Lato-Regular";
+      }
+   }
+   .unten {
+      margin-bottom: 80px;
+   }
+   .block-ikons {
+      @include element_position(flex, row, nowrap, 0, center, 0);
+      .ikon {
+         @include element_position(flex, column, nowrap, center, center, 20px);
+         .foto__ikon {
+            width: 100px;
+            height: 100px;
+            // margin-bottom: 20px;
+         }
+         .text__ikon {
+            @include font-style(16px, 400, 0, 0px, $white);
+            text-align: center;
+            font-family: "Lato-Regular";
+         }
+      }
+      .dots {
+         display: flex;
+         gap: 20px;
+         li {
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            border-radius: 50%;
+         }
+      }
+   }
+   .form {
+      input {
+         max-width: 370px;
+         outline: none;
+      }
+      .user {
+         @include element_position(flex, column, nowrap, 0, center, 40px);
+         .form-container {
+            @include element_position(flex, column, nowrap, 0, 0, 30px);
+            .first-container {
+               @include element_position(flex, row, nowrap, 0, 0, 30px);
+               .select {
+                  // background-color: #3d4050;
+                  @include font-style(18px, 400, 0, 22px, $form-color);
+                  font-family: "Lato-Regular";
+                  background: $firstInputbg-color;
+                  border: 1px solid $white;
+                  border-radius: 3px;
+                  padding: 12px 0 12px 10px;
+               }
+               option {
+                  @include font-style(18px, 400, 0, 34px, $white);
+                  font-family: "Lato-Regular";
+                  background-color: #272733e5;
+               }
+               option:hover {
+                  color: $navHover-color;
+               }
+               input {
+                  @include font-style(18px, 400, 0, 22px, $form-color);
+                  font-family: "Lato-Regular";
+                  background: $firstInputbg-color;
+                  border: 1px solid $white;
+                  border-radius: 3px;
+                  padding: 12px 0 12px 10px;
+               }
+            }
+            .second-container {
+               @include element_position(flex, row, nowrap, 0, 0, 22.5px);
+               .text-container {
+                  max-width: 770px;
+                  .item {
+                     width: 100%;
+                     @include element_position(flex, row, nowrap, space-between, 0, 0);
+                     .item__text,
+                     .item__percent {
+                        @include font-style(18px, 400, 0, 22px, $white);
+                        font-family: "Lato-Regular";
+                     }
+                  }
+                  .slider {
+                     width: 100%;
+                     // max-width: 770px;
+                  }
+               }
+               .file {
+                  @include font-style(15px, 600, 0, 18px, $white);
+                  font-family: "Lato-Regular";
+                  text-transform: uppercase;
+                  text-align: center;
+                  padding: 12px 0;
+               }
+            }
+         }
+      }
+      .form-btn button {
+         max-width: 370px;
+         background: $orderBackground-color;
+         border: 1px solid $white;
+         border-radius: 4px;
+         padding: 15px 65px;
+         @include font-style(15px, 600, 0, 18px, $form-color);
+         font-family: "Lato-Semibold";
+         text-align: center;
+         text-transform: uppercase;
+      }
+   }
+}

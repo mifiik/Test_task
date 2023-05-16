@@ -127,69 +127,62 @@
       margin-top: 82px;
       padding-top: 103px;
       padding-bottom: 202px;
-   }
-   .header__text {
-      max-width: 750px;
-      .text__title {
-         @include font-style(45px, 700, 0, 58px, $logo-color);
-         text-transform: uppercase;
-         font-family: "Lato-Bold";
-         @include breakpoint("md") {
-            @include font-style(24px, 600, 0, 40px, $logo-color);
-         }
-      }
-      .text__title span {
-         color: $about-color;
-      }
 
-      .title {
-         margin-bottom: 80px;
-      }
-      .text__info {
-         max-width: 534px;
-         .info__title {
-            @include font-style(20px, 700, 0, 24px, $about-color);
+      .header__text {
+         max-width: 750px;
+         .text__title {
+            @include font-style(45px, 700, 0, 58px, $logo-color);
+            text-transform: uppercase;
             font-family: "Lato-Bold";
+            @include breakpoint("md") {
+               @include font-style(24px, 600, 0, 40px, $logo-color);
+            }
          }
-         .info__list {
-            @include font-style(20px, 400, 0, 24px, $about-color);
-            font-family: "Lato-Regular";
+         .text__title span {
+            color: $about-color;
          }
-         .list {
+
+         .title {
             margin-bottom: 80px;
          }
+         .text__info {
+            max-width: 534px;
+            .info__title {
+               @include font-style(20px, 700, 0, 24px, $about-color);
+               font-family: "Lato-Bold";
+            }
+            .info__list {
+               @include font-style(20px, 400, 0, 24px, $about-color);
+               font-family: "Lato-Regular";
+            }
+            .list {
+               margin-bottom: 80px;
+            }
+         }
       }
-   }
-   .btn {
-      @include element_position(flex, row, 0, 0, 0, 30px);
-      .btn__order {
-         @include font-style(13px, 400, 0, 0, $white);
-         text-transform: uppercase;
-         text-align: center;
-         background-color: $orderBackground-color;
-         border: 1px solid $white;
-         border-radius: 4px;
-         padding: 15px 31px;
+      .btn {
+         @include element_position(flex, row, 0, 0, 0, 30px);
+         .btn__order {
+            @include font-style(13px, 400, 0, 0, $white);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $orderBackground-color;
+            border: 1px solid $white;
+            border-radius: 4px;
+            padding: 15px 31px;
+         }
+         .btn__detailed {
+            @include font-style(13px, 400, 0, 0, $detailed-color);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $white;
+            border: 1px solid $detailedBackground-color;
+            border-radius: 4px;
+            padding: 15px 30px;
+         }
       }
-      .btn__detailed {
-         @include font-style(13px, 400, 0, 0, $detailed-color);
-         text-transform: uppercase;
-         text-align: center;
-         background-color: $white;
-         border: 1px solid $detailedBackground-color;
-         border-radius: 4px;
-         padding: 15px 30px;
-      }
-   }
-}
-
-.dots {
-   display: flex;
-   gap: 20px;
-   li {
-      width: 6px;
-      height: 6px;
-      background-color: red;
-      border-radius: 50%;
+      // .distans {
+      //    margin-bottom: 202px;
+      // }
    }
 }
