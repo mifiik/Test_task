@@ -10,6 +10,7 @@
    }
    .header__nav {
       position: fixed;
+      z-index: 999;
       top: 0;
       left: 0;
       width: 100%;
@@ -81,8 +82,8 @@
             width: 100%;
             flex-direction: column;
             position: absolute;
-            top: 55px;
-            left: 89%;
+            top: 10px;
+            left: 75%;
             display: none;
          }
 
@@ -108,7 +109,7 @@
       .nav__list {
          @include element_position(flex, row, 0, 0, 0, 60px);
          .nav__item a {
-            @include font-style(13px, 600, 0, 0, $white);
+            @include font-style(13px, 600, 0, 22px, $white);
             text-transform: uppercase;
             font-family: "Lato-Semibold";
          }
@@ -181,8 +182,5 @@
             padding: 15px 30px;
          }
       }
-      // .distans {
-      //    margin-bottom: 202px;
-      // }
    }
 }

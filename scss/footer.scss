@@ -10,6 +10,9 @@
    .footer__container {
       .online-pay {
          @include element_position(flex, row, nowrap, space-between, center, 0);
+         @include breakpoint("sxl") {
+            @include element_position(0, column, 0, center, center, 20px);
+         }
          .walet__ikon {
             width: 20px;
             height: 20px;
@@ -21,23 +24,29 @@
          }
       }
       .money {
-         @include element_position(flex, row, nowrap, space-between, center, 0);
+         @include element_position(flex, row, nowrap, center, center, 38px);
          .walet {
-            @include element_position(flex, row, nowrap, space-between, center, 0);
+            @include element_position(flex, row, nowrap, space-between, center, 10px);
          }
          .stick__money {
             color: $footer-color;
+            @include breakpoint("sxl") {
+               display: none;
+            }
          }
          .walet__text {
             @include font-style(13px, 400, 0, 16px, $footer-color);
             text-transform: uppercase;
             font-family: "Lato-Regular";
          }
+         @include breakpoint("md") {
+            @include element_position(0, column, 0, center, center, 20px);
+         }
       }
       .social {
-         @include element_position(flex, row, nowrap, 0, center, 30px);
+         @include element_position(flex, row, wrap, center, center, 30px);
          .walet {
-            @include element_position(flex, row, nowrap, space-between, center, 0);
+            @include element_position(flex, row, nowrap, space-between, center, 10px);
          }
       }
    }
