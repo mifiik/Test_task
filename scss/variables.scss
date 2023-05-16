@@ -10,6 +10,7 @@ $detailed-color: rgb(42, 43, 48);
 $orderBackground-color: rgb(62, 156, 220);
 $detailedBackground-color: rgb(111, 109, 123);
 $firstInputbg-color: rgba(255, 255, 255, 0.85);
+$footerBg-color: rgb(61, 64, 80);
 
 @mixin font-style($fs, $fw, $ls, $lh, $cl) {
    font-size: $fs;

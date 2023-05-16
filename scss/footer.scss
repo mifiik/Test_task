@@ -1,1 +1,44 @@
 @import "./variables.scss";
+
+.footer {
+   background-color: $footerBg-color;
+   padding: 30px 0;
+   img {
+      width: 20px;
+      height: 20px;
+   }
+   .footer__container {
+      .online-pay {
+         @include element_position(flex, row, nowrap, space-between, center, 0);
+         .walet__ikon {
+            width: 20px;
+            height: 20px;
+         }
+         .copyright {
+            @include font-style(13px, 400, 0, 16px, $white);
+            font-family: "Lato-Regular";
+            text-align: center;
+         }
+      }
+      .money {
+         @include element_position(flex, row, nowrap, space-between, center, 0);
+         .walet {
+            @include element_position(flex, row, nowrap, space-between, center, 0);
+         }
+         .stick__money {
+            color: $footer-color;
+         }
+         .walet__text {
+            @include font-style(13px, 400, 0, 16px, $footer-color);
+            text-transform: uppercase;
+            font-family: "Lato-Regular";
+         }
+      }
+      .social {
+         @include element_position(flex, row, nowrap, 0, center, 30px);
+         .walet {
+            @include element_position(flex, row, nowrap, space-between, center, 0);
+         }
+      }
+   }
+}
